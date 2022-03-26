@@ -1,3 +1,4 @@
+// deno-lint-ignore-file
 interface DebouncedFunc<T extends (...args: any[]) => any> {
   /**
    * Call the original function, but applying the debounce rules.

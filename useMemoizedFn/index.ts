@@ -1,3 +1,4 @@
+// deno-lint-ignore-file
 import { useMemo, useRef } from '../deps.ts';
 
 type noop = (this: any, ...args: any[]) => any;
