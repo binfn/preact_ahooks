@@ -16,9 +16,9 @@ function useSize(target: BasicTarget): Size | undefined {
       if (!el) {
         return;
       }
-
-      const resizeObserver = new ResizeObserver((entries:any) => {
-        entries.forEach((entry:any) => {
+     
+      const resizeObserver = new ResizeObserver((entries, _observer) => {
+        entries.forEach((entry) => {
           const { clientWidth, clientHeight } = entry.target;
           setState({
             width: clientWidth,

@@ -1,8 +1,8 @@
 import { useMemo } from '../deps.ts';
-import useMemoizedFn from '../useMemoizedFn';
-import useRequest from '../useRequest';
+import useMemoizedFn from '../useMemoizedFn/index.ts';
+import useRequest from '../useRequest/index.ts';
 
-import type { Data, PaginationOptions, Params, Service, PaginationResult } from './types';
+import type { Data, PaginationOptions, Params, Service, PaginationResult } from './types.ts';
 
 const usePagination = <TData extends Data, TParams extends Params>(
   service: Service<TData, TParams>,
@@ -11,6 +11,7 @@ const usePagination = <TData extends Data, TParams extends Params>(
   const { defaultPageSize = 10, ...rest } = options;
 
   const result = useRequest(service, {
+    //@ts-ignore unknown
     defaultParams: [{ current: 1, pageSize: defaultPageSize }],
     refreshDepsAction: () => {
       // eslint-disable-next-line @typescript-eslint/no-use-before-define
@@ -33,9 +34,8 @@ const usePagination = <TData extends Data, TParams extends Params>(
     }
 
     const [oldPaginationParams = {}, ...restParams] = result.params || [];
-
-    result.run(
-      {
+    //@ts-ignore unknown
+    result.run({
         ...oldPaginationParams,
         current: toCurrent,
         pageSize: toPageSize,
