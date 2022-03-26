@@ -8,12 +8,7 @@ type PickFunction<T extends noop> = (
 ) => ReturnType<T>;
 
 function useMemoizedFn<T extends noop>(fn: T) {
-  if (process.env.NODE_ENV === 'development') {
-    if (typeof fn !== 'function') {
-      console.error(`useMemoizedFn expected parameter is a function, got ${typeof fn}`);
-    }
-  }
-
+  
   const fnRef = useRef<T>(fn);
 
   // why not write `fnRef.current = fn`?
