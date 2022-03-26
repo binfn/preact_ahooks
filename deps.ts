@@ -30,6 +30,8 @@ export { default as dayjs } from "https://esm.sh/dayjs@1.x";
 
 export { default as screenfull } from "https://esm.sh/screenfull@5.x.x";
 
+export { default as ResizeObserver } from "https://esm.sh/resize-observer-polyfill@1.5.x";
+
 // import type { DependencyList } from "https://esm.sh/react"
 export type DependencyList = ReadonlyArray<any>;
 
