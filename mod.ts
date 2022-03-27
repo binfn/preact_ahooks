@@ -70,6 +70,7 @@ import useVirtualList from './useVirtualList/index.ts';
 import useWebSocket from './useWebSocket/index.ts';
 import useWhyDidYouUpdate from './useWhyDidYouUpdate/index.ts';
 import { createUpdateEffect } from './createUpdateEffect/index.ts';
+import useMedia from './useMedia/index.ts';
 
 export {
   useRequest,
@@ -146,4 +147,5 @@ export {
   clearCache,
   useFocusWithin,
   createUpdateEffect,
+  useMedia
 };
