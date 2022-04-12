@@ -15,6 +15,7 @@ function useThrottleFn<T extends noop>(fn: T, options?: ThrottleOptions) {
     () =>
       throttle(
         ((...args: Parameters<T>): ReturnType<T> => {
+          // @ts-ignore unknown
           return fnRef.current(...args);
         }),
         wait,

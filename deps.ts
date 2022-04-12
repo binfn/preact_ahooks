@@ -1,3 +1,7 @@
+/// <reference no-default-lib="true" />
+/// <reference lib="dom" />
+/// <reference lib="deno.ns" />
+
 // deno-lint-ignore-file
 export * from "https://esm.sh/preact@10.x.x";
 
@@ -30,7 +34,8 @@ export { default as dayjs } from "https://esm.sh/dayjs@1.x";
 
 export { default as screenfull } from "https://esm.sh/screenfull@5.x.x";
 
-export { default as ResizeObserver } from "https://esm.sh/resize-observer-polyfill@1.5.x";
+//export { default as ResizeObserver } from "https://esm.sh/resize-observer-polyfill@1.5.x";
+export { ResizeObserver } from "https://esm.sh/resize-observer@1.0.4";
 
 // import type { DependencyList } from "https://esm.sh/react"
 export type DependencyList = ReadonlyArray<any>;
