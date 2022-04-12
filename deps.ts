@@ -1,5 +1,5 @@
 // deno-lint-ignore-file
-export * from "https://esm.sh/preact@10.6.6";
+export * from "https://esm.sh/preact@10.x.x";
 
 export {
   useCallback,
@@ -13,7 +13,7 @@ export {
   useReducer,
   useRef,
   useState,
-} from "https://esm.sh/preact@10.6.6/hooks";
+} from "https://esm.sh/preact@10.x.x/hooks";
 export type {
   CreateHandle,
   EffectCallback,
@@ -22,7 +22,7 @@ export type {
   Reducer,
   Ref,
   StateUpdater,
-} from "https://esm.sh/preact@10.6.6/hooks";
+} from "https://esm.sh/preact@10.x.x/hooks";
 
 export { default as Cookies } from "https://esm.sh/js-cookie@2.x.x";
 
